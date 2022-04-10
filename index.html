@@ -25,15 +25,141 @@
             <span>Israel</span>
           </span>
         </a>
-        <a class="search search--flex5"
-          ><span class="categories-select">
-            <span>All</span>
-            <i class="fa-solid fa-caret-down"></i>
+        <a class="search search--flex5">
+          <!-- <span>All</span> -->
+
+          <select class="categories-select">
+            <option selected="selected">All Departments</option>
+            <option>Arts &amp; Crafts</option>
+            <option>Automotive</option>
+            <option>Baby</option>
+            <option>Beauty &amp; Personal Care</option>
+            <option>Books</option>
+            <option>Boys' Fashion</option>
+            <option>Computers</option>
+            <option>Deals</option>
+            <option>Digital Music</option>
+            <option>Electronics</option>
+            <option>Girls' Fashion</option>
+            <option>Health &amp; Household</option>
+            <option>Home &amp; Kitchen</option>
+            <option>Industrial &amp; Scientific</option>
+            <option>Kindle Store</option>
+            <option>Luggage</option>
+            <option>Men's Fashion</option>
+            <option>Movies &amp; TV</option>
+            <option>Music, CDs &amp; Vinyl</option>
+            <option>Pet Supplies</option>
+            <option>Prime Video</option>
+            <option>Software</option>
+            <option>Sports &amp; Outdoors</option>
+            <option>Tools &amp; Home Improvement</option>
+            <option>Toys &amp; Games</option>
+            <option>Video Games</option>
+            <option>Women's Fashion</option>
+          </select>
+          <!-- <i class="fa-solid fa-caret-down"></i> -->
+          <input type="text" class="srch" />
+          <span class="magnifying-glass">
+            <svg
+              style="width: 22px"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+            >
+              <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+              <path
+                d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z"
+              />
+            </svg>
           </span>
-          <input type="text" />
-          <span class="btn"></span>
         </a>
-        <a class="lang-select-input"></a>
+        <a class="lang-select-input">
+          <span class="usaFlag"></span>
+          <i class="fa-solid fa-caret-down"></i>
+          <span class="langSelector">
+            <span
+              >Change language <span class="learnmore">Learn more</span>
+            </span>
+            <span><input type="radio" /> English - EN</span>
+            <span><input type="radio" /> español - ES</span>
+            <span class="nav-text"
+              ><input type="radio" /><span
+                style="unicode-bidi: isolate; direction: rtl"
+                dir="rtl"
+                >العربية&nbsp;
+              </span>
+              -
+              <span style="unicode-bidi: isolate; direction: ltr" dir="ltr"
+                >AR</span
+              ></span
+            >
+            <span class="nav-text"
+              ><input type="radio" /><span
+                style="unicode-bidi: isolate; direction: ltr"
+                dir="ltr"
+                >Deutsch</span
+              >
+              -
+              <span style="unicode-bidi: isolate; direction: ltr" dir="ltr"
+                >DE</span
+              ></span
+            >
+            <span class="nav-text"
+              ><input type="radio" /><span
+                style="unicode-bidi: isolate; direction: rtl"
+                dir="rtl"
+                >עברית</span
+              >
+              -
+              <span style="unicode-bidi: isolate; direction: ltr" dir="ltr"
+                >HE</span
+              ></span
+            >
+            <span class="nav-text"
+              ><input type="radio" /><span
+                style="unicode-bidi: isolate; direction: ltr"
+                dir="ltr"
+                >한국어</span
+              >
+              -
+              <span style="unicode-bidi: isolate; direction: ltr" dir="ltr"
+                >KO</span
+              ></span
+            >
+            <span class="nav-text"
+              ><input type="radio" /><span
+                style="unicode-bidi: isolate; direction: ltr"
+                dir="ltr"
+                >português</span
+              >
+              <span class="nav-text"
+                ><input type="radio" /><span
+                  style="unicode-bidi: isolate; direction: ltr"
+                  dir="ltr"
+                  >中文 (简体)</span
+                >
+                -
+                <span style="unicode-bidi: isolate; direction: ltr" dir="ltr"
+                  >ZH</span
+                ></span
+              >
+              <span style="unicode-bidi: isolate; direction: ltr" dir="ltr"
+                >PT</span
+              ></span
+            >
+            <span class="nav-text"
+              ><input type="radio" /><span
+                style="unicode-bidi: isolate; direction: ltr"
+                dir="ltr"
+                >中文 (繁體)</span
+              >
+              -
+              <span style="unicode-bidi: isolate; direction: ltr" dir="ltr"
+                >ZH</span
+              ></span
+            >
+          </span>
+        </a>
         <a class="signin">
           <span>Hello, Sign in</span>
           <span class="signin">Account & Lists</span>
@@ -64,5 +190,13 @@
         </nav>
       </div>
     </header>
+    <div
+      style="
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.115);
+        z-index: -1;
+      "
+    ></div>
   </body>
 </html>
