@@ -30,6 +30,7 @@ header {
   align-items: center;
   text-align: center;
   background-color: #131921;
+  font-weight: 700;
 }
 .header__main a {
   display: flex;
@@ -220,19 +221,25 @@ header {
 .header__main .lang-select-input:hover span.langSelector {
   position: absolute;
   left: 0px;
-  bottom: -500px;
+  bottom: -300px;
   width: 250px;
-  height: 500px;
+  height: 300px;
   background-color: #fff;
   color: #131921;
   z-index: 99999;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
   text-align: center;
   border-radius: 3px;
   padding: 10px;
+}
+.header__main .lang-select-input:hover span.langSelector span input {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  accent-color: #febd69;
 }
 /* .header__main .lang-select-input div.langSelector span span.learnmore {
   color: blue;
@@ -243,40 +250,27 @@ header {
 } */
 
 .header__main .signin {
-  flex: 1;
+  flex: 0.8;
   display: flex;
   flex-direction: column;
-  justify-content: first baseline;
-  text-align: start;
-  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  align-items: start;
   line-height: 1;
-  height: 100%;
-}
-.header__main .signin span:first-child {
-  transform: translateY(20px);
-}
-.header__main .signin span:last-child {
-  transform: translateY(20px);
 }
 
 .header__main .returns {
-  flex: 1;
+  flex: 0.5;
   display: flex;
   flex-direction: column;
-  justify-content: baseline;
-  text-align: start;
-  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  align-items: start;
   line-height: 1;
-  height: 100%;
-  position: relative;
 }
-.header__main .returns span:first-child {
-  transform: translateY(9px);
-}
-.header__main .returns span:last-child {
-  transform: translateY(9px);
-}
+
 .header__main a.cart {
+  flex: 0.5;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -291,6 +285,7 @@ header {
   position: relative;
 }
 .header__main a.cart div.cart-sprite span {
+  color: #febd69;
   position: absolute;
   left: 50%;
   top: -5px;
@@ -331,4 +326,82 @@ nav.header__navigation div a:first-child span:first-child {
   background: url('/assets/img/nav-sprite-global.png') no-repeat -170px -251px;
   width: 22px;
   height: 21px;
+}
+.breadcrumbs {
+  color: #565959;
+  font-size: 14px;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  height: 100%;
+}
+.main__gallery {
+  flex: 1;
+  position: relative;
+  height: 500px;
+  width: 100%;
+}
+.main__gallery:hover .main__gallery--thumb {
+  opacity: 0.7;
+}
+.main__gallery .main__gallery--thumb {
+  height: 50px;
+  width: 50px;
+  background: no-repeat center center;
+  background-size: cover;
+  transition: opacity 600ms;
+  margin-bottom: 5px;
+}
+
+.main__gallery .main__gallery--thumb:hover {
+  opacity: 1; /* overrides blur, so active img is not blurred */
+}
+
+.main__gallery--thumb:before {
+  opacity: 0;
+  width: 100%;
+}
+.main__gallery--thumb:last-of-type:before {
+  opacity: 1;
+}
+.main__gallery--thumb:hover:before {
+  z-index: 100; /* so this image stays on top */
+  opacity: 1;
+  transition: opacity 2000ms;
+}
+
+/* this is the full-size image  */
+.main__gallery--thumb:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  height: 100%;
+  padding-left: 20px; /* creates gap */
+  background: inherit;
+  background-position: 20px center; /* moves the image slightly right so there's a gap between thumbnails and full-size */
+}
+
+/*
+* CSS below just sets src of each image
+* could also be applied inline with HTML if needed to be dynamic
+*/
+.main__gallery--thumb.pic1 {
+  background-image: url('/assets/img/gallery/716YqOAMPSL._AC_SL1500_.jpg');
+}
+.main__gallery--thumb.pic2 {
+  background-image: url('/assets/img/gallery/71clARv1SuL._AC_SL1500_.jpg');
+}
+.main__gallery--thumb.pic3 {
+  background-image: url('/assets/img/gallery/71U113bN+jL._AC_SL1500_.jpg');
+}
+/*------------------------------------------------------------*/
+.main__desc {
+  flex: 1;
+}
+.main__buybox {
+  flex: 1;
 }
